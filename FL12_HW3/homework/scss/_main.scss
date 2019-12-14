@@ -1,0 +1,242 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.footer_logo {
+	@extend .landing-logo;
+	p {
+		color: $subordinate-font-color;
+	}
+}
+
+@mixin button {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: bold;
+	padding: 10px 40px;
+	cursor: pointer;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	background-color: $button-color;
+}
+
+@mixin link {
+	color: $subordinate-font-color;
+}
+
+
+body {
+	background-color: $background-color;
+	font-family: $font-family;
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+.landing-logo {
+	align-items: flex-start;
+	display: flex;
+	
+	p {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		color: $main-font-color;
+		font-size: map-get($font-size,h4);
+		font-weight: bold;
+		margin-left: 10px;
+
+		span {
+			font-size: 10px;
+		}
+	}
+}
+
+.header {
+	background-position: center;
+	background-size: cover;
+	background-image: $background-image;
+	border-bottom-right-radius: 40%;
+	min-height: 600px;
+
+	.header-wrap {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding-top: 15px;
+
+		.header_heading {
+			color: $main-font-color;
+			position: relative;
+			width: 50%;
+			margin-top: 50px;
+			line-height: 60px;
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size: map-get($font-size,h1);
+			font-weight: bold;
+
+			&:after {
+				content: 'awesome';
+				cursor: text;
+				background-color: $text-highlight-color;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+		}
+
+		.header_text {
+			line-height: 1.6;
+			margin-top: 20px;
+			white-space: pre-line;
+			color: $main-font-color;
+		}
+
+		div:last-child {
+			margin-top: 40px;
+			width: 50%;
+
+			.header_button {
+				@include button;
+			}
+
+			.login {
+				@include link;				
+				text-align: center;
+				font-weight: bold;
+				display: inline-block;
+				width: 60%;
+			}
+		}
+	}
+}
+
+.section {
+	max-width: 960px;
+	margin: 0 auto;
+
+	.section_text {
+		position: relative;
+		padding: 50px 0;
+		text-align: center;
+		font-size: map-get($font-size,h2);
+		font-weight: bold;
+		font-family: 'Source Sans Pro', sans-serif;
+		color: $main-font-color;
+
+		&:after {
+			content: 'adventure';
+			cursor: text;
+			background-color: $text-highlight-color;
+			position: absolute;
+			right: 30%;
+		}
+	}
+
+	.section_card_wrap {
+		margin: 0 auto;
+		width: 95%;
+
+		.section_card {
+			display: flex;
+			margin-bottom: 25px;
+			background-color: $footer-background;
+			border-radius: 4px;
+			padding: 20px;
+
+
+
+			.section_card_img {
+				border-radius: 4px;
+				width: 100%;
+			}
+
+			.section_card_right_container {
+				padding: 0 30px 0 50px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+
+
+				.section_card_heading {
+					text-align: center;
+					font-size: 20px;
+					font-weight: 600;
+					color: white;
+				}
+
+				.section_card_text,
+				.section_link {
+					color: $subordinate-font-color;
+				}
+			}
+		}
+	}
+
+	.section_banner {
+		display: flex;
+		padding: 30px 0;
+		position: relative;
+		align-items: center;
+		background-image: linear-gradient(to right, $left-gradient, $right-gradient);		
+		bottom: -60px;
+		border-radius: 4px;
+		justify-content: space-around;
+
+
+		.section_banner_heading {
+			color: $main-font-color;
+			position: relative;
+			margin-bottom: 10px;
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size: map-get($font-size,h3);
+			font-weight: bold;
+
+			&:after {
+				content: 'start';
+				cursor: text;
+				background-color: $text-highlight-color;
+				position: absolute;
+				right: 55%;
+			}
+		}
+
+		.section_banner_button {
+			@include button;
+		}
+
+		.section_banner_text {
+			color: $subordinate-font-color;
+			font-size: 12px;
+		}
+	}
+}
+
+.footer {
+	background-color: $footer-background;
+	color: $subordinate-font-color;
+	display: flex;
+	padding: 50px 0;
+
+	.footer-cr {
+		font-size: 14px;
+	}
+
+	.footer_text {
+		width: 320px;
+		font-size: 14px;
+		line-height: 1.6;
+	}
+
+	.footer-wrap {
+		margin: 0 auto;
+		justify-content: space-between;
+		padding-top: 60px;
+		align-items: center;
+		display: flex;
+		width: 1280px;
+	}
+}
+
+
+
