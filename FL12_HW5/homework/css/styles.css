@@ -76,7 +76,7 @@ ul {
 .link:visited {
   color: #fff;
 }
-li a {
+li 
   text-decoration: none;
 }
 footer {
@@ -264,6 +264,7 @@ aside {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 .text-section {
   padding: 22px;
