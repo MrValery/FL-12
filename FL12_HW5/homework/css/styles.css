@@ -76,7 +76,7 @@ ul {
 .link:visited {
   color: #fff;
 }
-li 
+li a {
   text-decoration: none;
 }
 footer {
